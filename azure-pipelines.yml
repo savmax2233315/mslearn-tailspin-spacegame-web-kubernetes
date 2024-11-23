@@ -61,7 +61,6 @@ stages:
        imageName: $(RegistryName)/$(webRepository):$(build.buildId)
       
     - task: KubernetesManifest@1
-    displayName: Deploy to Kubernetes cluster
     inputs:
       action: deploy
       connectionType: azureResourceManager
